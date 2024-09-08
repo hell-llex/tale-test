@@ -1,0 +1,288 @@
+@font-face {
+  font-display: swap;
+  font-family: Gilroy-Regular;
+  font-style: normal;
+  font-weight: 400;
+  src: url(./assets/fonts/gilroy.woff2) format("woff2");
+}
+@font-face {
+  font-family: Gilroy-Bold;
+  font-style: normal;
+  font-weight: 400;
+  src: url(./assets/fonts/gilroyBold.woff2) format("woff2");
+}
+*,
+:after,
+:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+body {
+  font-family: Gilroy-Regular, arial, verdana, sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+  background: linear-gradient(0deg, rgb(150, 70, 155) 20%, rgb(239, 104, 149) 80%);
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+header .icon-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background: #e9e9e6;
+}
+header .icon-bar .icon-item {
+  width: 50%;
+  height: 100%;
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .icon-bar .icon-item.active {
+  background: #f2f2f2;
+}
+header .icon-bar .icon-item .icon-item__brand {
+  height: 100%;
+}
+header .icon-bar .icon-item .icon-item__brand .icon-item__image {
+  display: block;
+  height: 100%;
+}
+header .promo {
+  display: flex;
+  height: 64px;
+  width: 100%;
+  padding: 10px 10px 6px 10px;
+  position: relative;
+  font-size: 14px;
+  justify-content: flex-start;
+  line-height: 24px;
+  background-color: #9d2f6b;
+  color: #FFFFFF;
+}
+header .promo .promo-text {
+  width: calc(100% - 11px);
+  height: 44px;
+  line-height: 20px;
+  text-align: left;
+}
+header .promo .promo-text .promo-text-link {
+  cursor: pointer;
+  text-decoration: underline;
+}
+header .logo {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2f2f2;
+}
+header .logo .logo-container {
+  width: 139px;
+  height: 60px;
+  margin-top: 14px;
+}
+
+main .experience-component {
+  overflow: hidden;
+  padding: 10px 0;
+}
+main .experience-carousel_1 {
+  padding: 10px;
+}
+main .experience-carousel_1 .carousel {
+  height: 100%;
+}
+main .experience-carousel_1 .carousel .carousel-control {
+  display: none;
+}
+main .experience-carousel_1 .carousel .carousel-inner {
+  height: 180vw;
+}
+main .experience-carousel_2 {
+  height: 544px;
+}
+main .experience-carousel_2 .carousel {
+  padding: 50px 15px;
+  width: 100%;
+}
+main .experience-carousel_2 .carousel .carousel__head {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 19px;
+}
+main .experience-carousel_2 .carousel .carousel__head .carousel__headline .headline {
+  font-size: 24px;
+  line-height: 36px;
+  color: #FFFFFF;
+}
+main .experience-carousel_2 .carousel .carousel__head .carousel__navigation {
+  display: none;
+}
+main .experience-carousel_2 .carousel .carousel__content {
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  cursor: pointer;
+  display: flex;
+  margin-top: 10px;
+  overflow-x: auto;
+  position: relative;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+  white-space: nowrap;
+  will-change: transform;
+}
+main .experience-carousel_2 .carousel .carousel__content .carousel__wrapper {
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  width: 100%;
+}
+main .experience-carousel_2 .carousel .carousel__content .carousel__wrapper .carousel__item {
+  flex: 0 0 auto;
+  margin-right: 10px;
+  overflow: hidden;
+  position: relative;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  scrollbar-width: none;
+}
+main .experience-carousel_2 .carousel .carousel__content .carousel__wrapper .carousel__item .category-tile {
+  width: 252px;
+  background: #f2f2f2;
+  color: #000;
+  text-align: center;
+}
+main .experience-carousel_2 .carousel .carousel__content .carousel__wrapper .carousel__item .category-tile .category-tile__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+main .experience-carousel_2 .carousel .carousel__content .carousel__wrapper .carousel__item .category-tile .category-tile__link picture {
+  display: block;
+  position: relative;
+}
+main .experience-carousel_2 .carousel .carousel__content .carousel__wrapper .carousel__item .category-tile .category-tile__link .text {
+  padding: 10px 0 10px 0;
+  font-size: 18px;
+  line-height: 30px;
+}
+main .experience-contentBanner_1 {
+  padding: 0 10px;
+  margin: 0 auto;
+}
+main .experience-contentBanner_1 .banner__link {
+  text-decoration: none;
+  margin: 0 0 50px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+main .experience-contentBanner_1 .banner__link .banner__image {
+  padding: 0 1rem;
+  width: 100%;
+}
+main .experience-contentBanner_1 .banner__link .banner__image img {
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+main .experience-contentBanner_1 .banner__link .banner__info {
+  flex: 0 0 auto;
+  width: 100%;
+  position: relative;
+  order: 2;
+}
+main .experience-contentBanner_1 .banner__link .banner__info .banner__headline {
+  word-wrap: break-word;
+  margin-top: -10px;
+  overflow: initial;
+  width: auto;
+  color: #FFFFFF;
+  font-size: 48px;
+  line-height: 52px;
+  font-family: Gilroy-Bold, arial, verdana, sans-serif;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  text-transform: uppercase;
+}
+main .experience-contentBanner_1 .banner__link .banner__info .banner__details {
+  width: 100%;
+}
+main .experience-contentBanner_1 .banner__link .banner__info .banner__details .banner__text {
+  margin-bottom: 3rem;
+  margin-top: 0.5rem;
+  color: #FFFFFF;
+  font-family: Gilroy-Regular, arial, verdana, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+}
+main .experience-contentBanner_1 .banner__link .banner__info .banner__details button {
+  cursor: pointer;
+  height: 48px;
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
+  transition: background-color 0.2s linear;
+  align-items: center;
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  font-family: Gilroy-Regular, arial, verdana, sans-serif;
+  font-size: 16px;
+  gap: 10px;
+  justify-content: space-evenly;
+  line-height: 24px;
+  padding: 12px 32px;
+  text-decoration: none;
+}
+main .experience-contentBanner_1 .banner__link .banner__info .banner__details button:hover {
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
+}
+main .experience-contentBanner_1 .banner__link .banner__info .banner__details button .button__text {
+  color: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  pointer-events: none;
+}
+
+@media (min-width: 576px) {
+  main .experience-component.experience-carousel_1,
+  main .experience-component.experience-contentBanner_1 {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  main .experience-component {
+    max-width: 720px;
+  }
+}/*# sourceMappingURL=styles.css.map */
