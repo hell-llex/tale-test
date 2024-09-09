@@ -30,7 +30,7 @@ $(document).ready(function () {
         items: 1
       },
       320: {
-        items: 0
+        items: 1
       },
       576: {
         items: 2
