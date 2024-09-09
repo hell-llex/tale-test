@@ -223,10 +223,6 @@ body {
             display: inline-flex;
           }
 
-          .owl-item {
-            width: fit-content !important;
-          }
-
           .carousel__item {
             flex: 0 0 auto;
             margin-right: 10px;
@@ -449,9 +445,6 @@ body {
 
         .carousel__content {
           .carousel__wrapper {
-            .owl-item {
-              width: fit-content !important;
-            }
 
             .owl-item:last-of-type {
               .carousel__item {
@@ -814,11 +807,6 @@ body {
           .carousel__wrapper {
             .owl-stage {
               display: inline-flex;
-              width: fit-content !important;
-            }
-
-            .owl-item {
-              width: fit-content !important;
             }
 
             .carousel__item {
@@ -1011,8 +999,6 @@ body {
           .carousel__wrapper {
             .owl-stage {
               display: inline-flex;
-              width: fit-content !important;
-
               padding-left: 37px;
             }
           }

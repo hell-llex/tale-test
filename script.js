@@ -25,6 +25,7 @@ window.addEventListener('scroll', function () {
 $(document).ready(function () {
   var owl = $('.owl-carousel').owlCarousel({
     nav: false,
+    autoWidth: true,
     responsive: {
       0: {
         items: 1
@@ -46,24 +47,25 @@ $(document).ready(function () {
       }
     },
     onInitialized: checkNavigationButtons,
-    onChanged: checkNavigationButtons
+    onTranslated: checkNavigationButtons,
+    onResized: checkNavigationButtons
   });
 
   function checkNavigationButtons(event) {
-    var totalItems = event.item.count;
-    var itemsPerPage = event.page.size;
-    var currentIndex = event.item.index;
+    let stage = $('.owl-stage');
+    if (stage.length === 0) return;
 
-    if (currentIndex === 0) {
-      $('.carousel__arrow--prev').addClass('disabled');
-    } else {
-      $('.carousel__arrow--prev').removeClass('disabled');
-    }
+    let stageWidth = stage.width();
+    let containerWidth = $('.owl-carousel').width();
+    let stagePosition = stage.position();
 
-    if (currentIndex + itemsPerPage >= totalItems) {
-      $('.carousel__arrow--next').addClass('disabled');
-    } else {
-      $('.carousel__arrow--next').removeClass('disabled');
+    if (stagePosition) {
+      let currentIndex = event.item.index;
+      let isAtStart = currentIndex === 0;
+      let isAtEnd = Math.ceil(stagePosition.left + stageWidth) <= containerWidth;
+
+      $('.carousel__arrow--prev').toggleClass('disabled', isAtStart);
+      $('.carousel__arrow--next').toggleClass('disabled', isAtEnd);
     }
   }
 
